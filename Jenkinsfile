@@ -19,7 +19,7 @@ node {
         stage('SonarQube Analysis') {
             // Running SonarQube analysis
             withSonarQubeEnv(sonarQubeServer) {
-                sh "sonar-scanner -Dsonar.projectKey=${projectKey} -Dsonar.sources=. -Dsonar.host.url=${sonarHostUrl} -Dsonar.login=${sonarLoginToken}"
+                bat "sonar-scanner -Dsonar.projectKey=${projectKey} -Dsonar.sources=. -Dsonar.host.url=${sonarHostUrl} -Dsonar.login=${sonarLoginToken}"
             }
         }
 
