@@ -33,7 +33,7 @@ node {
             }
         }
     } catch (Exception e) {
-        // Handle errors
+        echo e.toString()
         throw e
     } finally {
         // Post-build actions like cleanup, notifications, etc.
